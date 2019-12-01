@@ -1,0 +1,25 @@
+Get Background and Frame
+Convert to Gray
+Subtract BG from FG
+Gaussian Blur
+Otsu Threshold
+Canny Edge detection
+Find Contours
+Iterate Through contours
+Use contours to obtain bounding boxes
+Crop out bounding boxes from original image
+Increase size of cropped bounding box
+Perform a second Gaussian Blur and Otsu Threshold
+Fill corners to leave only pips
+Use blob detection to count and save pip count
+
+
+Get BG and FG, convert to Gray, and obtain Difference
+
+Gaussian Blur into Otsu Threshold
+
+Canny edge detection and Find Contours
+
+Iterate through contours, Find bounding boxes
+
+Crop bounding boxes from original image and 

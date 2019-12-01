@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import copy
+import MVutil as mvu
 
 print("Hello World")
 
@@ -43,27 +44,29 @@ def main():
 		cv2.imshow("diff", diff)
 		
 		blur = cv2.GaussianBlur(diff,(5,5),0)
+		#blur = cv2.GaussianBlur(diff,(3,3),0)
 		
 		ret3, thresh_im = cv2.threshold(blur,100,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+		#ret3, thresh_im = cv2.threshold(blur,80,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 		
 		cv2.imshow("otsu", thresh_im)
 		
 		# Will need to improve canny edges by a small bit
 		# to fix the single missing pixels messing up detection
-		edges = cv2.Canny(thresh_im,100,200)
+		#edges = cv2.Canny(thresh_im,100,200)
+		edges = cv2.Canny(thresh_im,50,250)
 		
 		cv2.imshow("Canny edges", edges)
-		
-		#print(edges)
 		
 		im2, contours, hierarchy = cv2.findContours(edges, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
 		hierarchy = hierarchy[0] # get the actual inner list of hierarchy descriptions
 		cnt = contours[0]
 		
-		# For each contour, find the bounding rectangle and draw it
+		
 		frame_cpy1 = copy.deepcopy(frame)
 		frame_cpy2 = copy.deepcopy(frame)
+		# For each contour, find the bounding rectangle and draw it
 		contours_drawn = cv2.drawContours(frame_cpy1, contours, -1, (0,255,0), 3)
 		
 		cv2.imshow("Contours Drawn", contours_drawn)
@@ -80,7 +83,7 @@ def main():
 				print("x, y, w, h: ", x, y, w, h)
 				
 				# crop section from main image
-				cropped_die = frame[y:y+h, x:x+w]
+				cropped_die = mvu.cropImage(frame, x, y, w, h)
 				
 				dice.append(cropped_die)
 				
@@ -122,9 +125,7 @@ def main():
 				
 				dice.append(fill_die)
 				
-				# (may have to perform morphology)
 				# blob detection
-				
 				kp_die, kp = blob_detection(fill_die)
 				
 				dice.append(kp_die)
@@ -134,26 +135,7 @@ def main():
 				
 				dice_num = len(kp)
 				
-				# font 
-				font = cv2.FONT_HERSHEY_SIMPLEX 
-				
-				# org 
-				org = (x, y) 
-				
-				# fontScale 
-				fontScale = 1
-				
-				# Blue color in BGR 
-				color = (255, 0, 0) 
-				
-				# Line thickness of 2 px 
-				thickness = 2
-				
-				# Using cv2.putText() method
-								
-				bounding = cv2.putText(bounding, str(dice_num), org, font, fontScale, color, thickness, cv2.LINE_AA) 
-				
-				# draw onto image
+				bounding = mvu.writeText(bounding, x, y, str(dice_num), font_color=(255, 0, 0))
 		
 		cv2.imshow("Bounding Boxes", bounding)
 		
