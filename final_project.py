@@ -135,7 +135,7 @@ def main():
 				
 				dice_num = len(kp)
 				
-				bounding = mvu.writeText(bounding, x, y, str(dice_num), font_color=(255, 0, 0))
+				bounding = mvu.writeText(bounding, x, y, str(dice_num), font_color=(0, 0, 255))
 		
 		cv2.imshow("Bounding Boxes", bounding)
 		
