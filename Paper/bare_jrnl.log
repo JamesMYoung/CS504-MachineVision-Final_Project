@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.11.6)  5 DEC 2019 08:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.8)  9 DEC 2019 01:01
 entering extended mode
 **./bare_jrnl.tex
 (bare_jrnl.tex
-LaTeX2e <2019-10-01>
+LaTeX2e <2018-12-01>
 
 ("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ieeetran\IEEEtran.
 cls"
@@ -16,8 +16,8 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmpcountB=\count81
 \@IEEEtrantmpcountC=\count82
 \@IEEEtrantmptoksA=\toks14
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
-03.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
+
 ("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -112,53 +112,664 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count94
 \@IEEEtranrubishbin=\box28
+)
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
+)
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
+y"
+Package: caption 2019/09/01 v3.3d Customizing captions (AR)
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.s
+ty"
+Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen128
+\captionmargin@=\dimen129
+\captionwidth=\dimen130
+\caption@tempdima=\dimen131
+\caption@indent=\dimen132
+\caption@parindent=\dimen133
+\caption@hangindent=\dimen134
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi .
+\c@caption@flags=\count95
+\c@ContinuedFloat=\count96
+)
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption
+.sty"
+Package: subcaption 2019/09/01 v1.3a Sub-captions (AR)
+\c@subfigure=\count97
+\c@subtable=\count98
 ) (bare_jrnl.aux)
 \openout1 = `bare_jrnl.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 353.
-LaTeX Font Info:    ... okay on input line 353.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 353.
-LaTeX Font Info:    ... okay on input line 353.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 353.
-LaTeX Font Info:    ... okay on input line 353.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 353.
-LaTeX Font Info:    ... okay on input line 353.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 353.
-LaTeX Font Info:    ... okay on input line 353.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 353.
-LaTeX Font Info:    ... okay on input line 353.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 360.
+LaTeX Font Info:    ... okay on input line 360.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 360.
+LaTeX Font Info:    ... okay on input line 360.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 360.
+LaTeX Font Info:    ... okay on input line 360.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 360.
+LaTeX Font Info:    ... okay on input line 360.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 360.
+LaTeX Font Info:    ... okay on input line 360.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 360.
+LaTeX Font Info:    ... okay on input line 360.
 
 -- Lines per column: 58 (exact).
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count99
+\scratchdimen=\dimen135
+\scratchbox=\box29
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen136
+\MPnumerator=\count103
+\makeMPintoPDFobject=\count104
+\everyMPtoPDFconversion=\toks17
+)
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
+base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infware
+rr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.st
+y"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefin
+ekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds
+.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions
+.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetke
+ys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcmd
+s.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluate
+x.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftexc
+mds.sty"
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\James\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.s
+ty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 476--477
+
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 478--479
+[]\OT1/ptm/m/n/10 This is where this pro-gram comes into the pic-ture;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+
+ []
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 471.
+(Font)              <7> on input line 580.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 471.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 666.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 666.
+(Font)              <5> on input line 580.
+<../"Presentation & Poster"/images/BG.png, id=1, 180.675pt x 156.585pt>
+File: ../"Presentation & Poster"/images/BG.png Graphic file (type png)
+<use ../"Presentation & Poster"/images/BG.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/BG.png  used on inpu
+t line 591.
+(pdftex.def)             Requested size: 227.62204pt x 197.27423pt.
+<../"Presentation & Poster"/images/FG.png, id=3, 180.675pt x 156.585pt>
+File: ../"Presentation & Poster"/images/FG.png Graphic file (type png)
+<use ../"Presentation & Poster"/images/FG.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/FG.png  used on inpu
+t line 597.
+(pdftex.def)             Requested size: 227.62204pt x 197.27423pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 604--605
+
+ []
+
+<../"Presentation & Poster"/images/"FGBG Difference".png, id=4, 566.86781pt x 5
+14.17094pt>
+File: ../"Presentation & Poster"/images/"FGBG Difference".png Graphic file (typ
+e png)
+<use ../"Presentation & Poster"/images/"FGBG Difference".png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/"FGBG Difference".pn
+g  used on input line 607.
+(pdftex.def)             Requested size: 227.62204pt x 206.45714pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../"Presentation & Poster"/images/"Otsu1".png, id=5, 566.86781pt x 514.17094pt
+>
+File: ../"Presentation & Poster"/images/"Otsu1".png Graphic file (type png)
+<use ../"Presentation & Poster"/images/"Otsu1".png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/"Otsu1".png  used on
+ input line 617.
+(pdftex.def)             Requested size: 227.62204pt x 206.45714pt.
 [1{C:/Users/James/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-]
-(bare_jrnl.aux) ) 
+ <../Presentation & Poster/images/BG.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../"Presentation & Poster"/images/"CannyEdges".png, id=16, 566.86781pt x 514.1
+7094pt>
+File: ../"Presentation & Poster"/images/"CannyEdges".png Graphic file (type png
+)
+<use ../"Presentation & Poster"/images/"CannyEdges".png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/"CannyEdges".png  us
+ed on input line 626.
+(pdftex.def)             Requested size: 227.62204pt x 206.45714pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--637
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--640
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 642--643
+
+ []
+
+<../"Presentation & Poster"/images/"small_crop".png, id=17, 91.84312pt x 113.67
+468pt>
+File: ../"Presentation & Poster"/images/"small_crop".png Graphic file (type png
+)
+<use ../"Presentation & Poster"/images/"small_crop".png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/"small_crop".png  us
+ed on input line 645.
+(pdftex.def)             Requested size: 113.81102pt x 140.87361pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 652--653
+
+ []
+
+<../"Presentation & Poster"/images/"small_blur".png, id=18, 91.84312pt x 113.67
+468pt>
+File: ../"Presentation & Poster"/images/"small_blur".png Graphic file (type png
+)
+<use ../"Presentation & Poster"/images/"small_blur".png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/"small_blur".png  us
+ed on input line 655.
+(pdftex.def)             Requested size: 113.81102pt x 140.87361pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 662--663
+
+ []
+
+[2 <../Presentation & Poster/images/FG.png> <../Presentation & Poster/images/FG
+BG Difference.png> <../Presentation & Poster/images/Otsu1.png> <../Presentation
+ & Poster/images/CannyEdges.png>]
+<../"Presentation & Poster"/images/"small_otsu".png, id=26, 91.84312pt x 113.67
+468pt>
+File: ../"Presentation & Poster"/images/"small_otsu".png Graphic file (type png
+)
+<use ../"Presentation & Poster"/images/"small_otsu".png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/"small_otsu".png  us
+ed on input line 665.
+(pdftex.def)             Requested size: 113.81102pt x 140.87361pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 672--673
+
+ []
+
+<../"Presentation & Poster"/images/"small_bucketfill".png, id=27, 91.84312pt x 
+113.67468pt>
+File: ../"Presentation & Poster"/images/"small_bucketfill".png Graphic file (ty
+pe png)
+<use ../"Presentation & Poster"/images/"small_bucketfill".png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/"small_bucketfill".p
+ng  used on input line 675.
+(pdftex.def)             Requested size: 113.81102pt x 140.87361pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--683
+
+ []
+
+<../"Presentation & Poster"/images/"small_blob".png, id=28, 91.84312pt x 113.67
+468pt>
+File: ../"Presentation & Poster"/images/"small_blob".png Graphic file (type png
+)
+<use ../"Presentation & Poster"/images/"small_blob".png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/"small_blob".png  us
+ed on input line 685.
+(pdftex.def)             Requested size: 113.81102pt x 140.87361pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 692--693
+
+ []
+
+<../"Presentation & Poster"/images/"Final_output_red".png, id=29, 566.86781pt x
+ 514.17094pt>
+File: ../"Presentation & Poster"/images/"Final_output_red".png Graphic file (ty
+pe png)
+<use ../"Presentation & Poster"/images/"Final_output_red".png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/"Final_output_red".p
+ng  used on input line 695.
+(pdftex.def)             Requested size: 227.62204pt x 206.45714pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--703
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 704--705
+
+ []
+
+<../"Presentation & Poster"/images/image1.png, id=30, 180.675pt x 156.585pt>
+File: ../"Presentation & Poster"/images/image1.png Graphic file (type png)
+<use ../"Presentation & Poster"/images/image1.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/image1.png  used on 
+input line 712.
+(pdftex.def)             Requested size: 122.5496pt x 106.21117pt.
+<../"Presentation & Poster"/images/image1_output.png, id=31, 566.86781pt x 514.
+17094pt>
+File: ../"Presentation & Poster"/images/image1_output.png Graphic file (type pn
+g)
+<use ../"Presentation & Poster"/images/image1_output.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/image1_output.png  u
+sed on input line 718.
+(pdftex.def)             Requested size: 122.5496pt x 111.15656pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 710--722
+ []$[]$$[]$ 
+ []
+
+<../"Presentation & Poster"/images/image2.png, id=32, 180.675pt x 156.585pt>
+File: ../"Presentation & Poster"/images/image2.png Graphic file (type png)
+<use ../"Presentation & Poster"/images/image2.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/image2.png  used on 
+input line 731.
+(pdftex.def)             Requested size: 122.5496pt x 106.21117pt.
+<../"Presentation & Poster"/images/image2_output.png, id=33, 566.86781pt x 514.
+17094pt>
+File: ../"Presentation & Poster"/images/image2_output.png Graphic file (type pn
+g)
+<use ../"Presentation & Poster"/images/image2_output.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/image2_output.png  u
+sed on input line 737.
+(pdftex.def)             Requested size: 122.5496pt x 111.15656pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 729--741
+ []$[]$$[]$ 
+ []
+
+<../"Presentation & Poster"/images/image3.png, id=34, 180.675pt x 156.585pt>
+File: ../"Presentation & Poster"/images/image3.png Graphic file (type png)
+<use ../"Presentation & Poster"/images/image3.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/image3.png  used on 
+input line 750.
+(pdftex.def)             Requested size: 122.5496pt x 106.21117pt.
+<../"Presentation & Poster"/images/image3_output.png, id=35, 566.86781pt x 514.
+17094pt>
+File: ../"Presentation & Poster"/images/image3_output.png Graphic file (type pn
+g)
+<use ../"Presentation & Poster"/images/image3_output.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/image3_output.png  u
+sed on input line 756.
+(pdftex.def)             Requested size: 122.5496pt x 111.15656pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 748--760
+ []$[]$$[]$ 
+ []
+
+<../"Presentation & Poster"/images/image4.png, id=36, 180.675pt x 156.585pt>
+File: ../"Presentation & Poster"/images/image4.png Graphic file (type png)
+<use ../"Presentation & Poster"/images/image4.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/image4.png  used on 
+input line 769.
+(pdftex.def)             Requested size: 122.5496pt x 106.21117pt.
+<../"Presentation & Poster"/images/image4_output.png, id=37, 566.86781pt x 514.
+17094pt>
+File: ../"Presentation & Poster"/images/image4_output.png Graphic file (type pn
+g)
+<use ../"Presentation & Poster"/images/image4_output.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/image4_output.png  u
+sed on input line 775.
+(pdftex.def)             Requested size: 122.5496pt x 111.15656pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 767--779
+ []$[]$$[]$ 
+ []
+
+<../"Presentation & Poster"/images/image5.png, id=38, 180.675pt x 156.585pt>
+File: ../"Presentation & Poster"/images/image5.png Graphic file (type png)
+<use ../"Presentation & Poster"/images/image5.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/image5.png  used on 
+input line 787.
+(pdftex.def)             Requested size: 122.5496pt x 106.21117pt.
+<../"Presentation & Poster"/images/image5_output.png, id=39, 566.86781pt x 514.
+17094pt>
+File: ../"Presentation & Poster"/images/image5_output.png Graphic file (type pn
+g)
+<use ../"Presentation & Poster"/images/image5_output.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/image5_output.png  u
+sed on input line 793.
+(pdftex.def)             Requested size: 122.5496pt x 111.15656pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 785--797
+ []$[]$$[]$ 
+ []
+
+<../"Presentation & Poster"/images/adjacent_1.png, id=40, 566.86781pt x 513.418
+12pt>
+File: ../"Presentation & Poster"/images/adjacent_1.png Graphic file (type png)
+<use ../"Presentation & Poster"/images/adjacent_1.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/adjacent_1.png  used
+ on input line 805.
+(pdftex.def)             Requested size: 122.5496pt x 110.99379pt.
+<../"Presentation & Poster"/images/adjacent_2.png, id=41, 566.86781pt x 514.170
+94pt>
+File: ../"Presentation & Poster"/images/adjacent_2.png Graphic file (type png)
+<use ../"Presentation & Poster"/images/adjacent_2.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/adjacent_2.png  used
+ on input line 811.
+(pdftex.def)             Requested size: 122.5496pt x 111.15656pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 803--815
+ []$[]$$[]$ 
+ []
+
+<../"Presentation & Poster"/images/overlapping_1.png, id=42, 566.86781pt x 513.
+41812pt>
+File: ../"Presentation & Poster"/images/overlapping_1.png Graphic file (type pn
+g)
+<use ../"Presentation & Poster"/images/overlapping_1.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/overlapping_1.png  u
+sed on input line 823.
+(pdftex.def)             Requested size: 122.5496pt x 110.99379pt.
+<../"Presentation & Poster"/images/overlapping_2.png, id=43, 566.86781pt x 514.
+17094pt>
+File: ../"Presentation & Poster"/images/overlapping_2.png Graphic file (type pn
+g)
+<use ../"Presentation & Poster"/images/overlapping_2.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/overlapping_2.png  u
+sed on input line 829.
+(pdftex.def)             Requested size: 122.5496pt x 111.15656pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 821--833
+ []$[]$$[]$ 
+ []
+
+<../"Presentation & Poster"/images/"pixel_gaps_2".png, id=44, 566.86781pt x 514
+.17094pt>
+File: ../"Presentation & Poster"/images/"pixel_gaps_2".png Graphic file (type p
+ng)
+<use ../"Presentation & Poster"/images/"pixel_gaps_2".png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/"pixel_gaps_2".png  
+used on input line 838.
+(pdftex.def)             Requested size: 227.62204pt x 206.45714pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../"Presentation & Poster"/images/pixel_gap1.png, id=45, 235.63031pt x 267.248
+44pt>
+File: ../"Presentation & Poster"/images/pixel_gap1.png Graphic file (type png)
+<use ../"Presentation & Poster"/images/pixel_gap1.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/pixel_gap1.png  used
+ on input line 848.
+(pdftex.def)             Requested size: 122.5496pt x 138.99445pt.
+<../"Presentation & Poster"/images/pixel_gap2.png, id=46, 195.73125pt x 224.338
+12pt>
+File: ../"Presentation & Poster"/images/pixel_gap2.png Graphic file (type png)
+<use ../"Presentation & Poster"/images/pixel_gap2.png>
+Package pdftex.def Info: ../"Presentation & Poster"/images/pixel_gap2.png  used
+ on input line 854.
+(pdftex.def)             Requested size: 122.5496pt x 140.46086pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 846--858
+ []$[]$$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 865--866
+
+ []
+
+[3 <../Presentation & Poster/images/small_crop.png> <../Presentation & Poster/i
+mages/small_blur.png> <../Presentation & Poster/images/small_otsu.png> <../Pres
+entation & Poster/images/small_bucketfill.png> <../Presentation & Poster/images
+/small_blob.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 867--868
+
+ []
+
+[4 <../Presentation & Poster/images/Final_output_red.png> <../Presentation & Po
+ster/images/image1.png> <../Presentation & Poster/images/image1_output.png> <..
+/Presentation & Poster/images/image2.png> <../Presentation & Poster/images/imag
+e2_output.png> <../Presentation & Poster/images/image3.png> <../Presentation & 
+Poster/images/image3_output.png> <../Presentation & Poster/images/image4.png> <
+../Presentation & Poster/images/image4_output.png> <../Presentation & Poster/im
+ages/image5.png> <../Presentation & Poster/images/image5_output.png> <../Presen
+tation & Poster/images/adjacent_1.png> <../Presentation & Poster/images/adjacen
+t_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 869--870
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 871--872
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 873--874
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 875--876
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--878
+
+ []
+
+[5 <../Presentation & Poster/images/overlapping_1.png> <../Presentation & Poste
+r/images/overlapping_2.png> <../Presentation & Poster/images/pixel_gaps_2.png> 
+<../Presentation & Poster/images/pixel_gap1.png> <../Presentation & Poster/imag
+es/pixel_gap2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 889--890
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 891--892
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 896--897
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 900--901
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 903--904
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 906--907
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--910
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 911--912
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 914--915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 917--918
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--921
+
+ []
+
+[6] [7
+
+] (bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
- 1067 strings out of 492452
- 19951 string characters out of 3120064
- 85761 words of memory out of 3000000
- 5484 multiletter control sequences out of 15000+200000
- 43058 words of font info for 77 fonts, out of 3000000 for 9000
+ 3614 strings out of 492946
+ 66891 string characters out of 3126389
+ 135242 words of memory out of 3000000
+ 7478 multiletter control sequences out of 15000+200000
+ 37308 words of font info for 67 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 27i,8n,28p,207b,208s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/James/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dv
-ips/base/8r.enc}<C:/Users/James/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
-rw/times/utmb8a.pfb><C:/Users/James/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/urw/times/utmbi8a.pfb><C:/Users/James/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/urw/times/utmr8a.pfb><C:/Users/James/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (1 page, 52585 bytes).
+ 41i,7n,39p,896b,414s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/James/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/
+dvips/base/8r.enc}<C:/Users/James/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy7.pfb><C:/Users/James/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/urw/times/utmb8a.pfb><C:/Users/James/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/James/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/James/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_jrnl.pdf (7 pages, 11290282 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
+ 104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

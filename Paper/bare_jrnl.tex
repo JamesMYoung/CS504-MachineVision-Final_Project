@@ -51,6 +51,13 @@
 
 
 \documentclass[journal]{IEEEtran}
+
+\usepackage{graphicx}
+\graphicspath{ {../"Presentation & Poster"/images/} }
+
+\usepackage{caption}
+\usepackage{subcaption}
+
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
@@ -393,7 +400,7 @@
 
 
 % The paper headers
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+\markboth{CS 504: Machine Vision - Final Project}%
 {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
@@ -426,18 +433,13 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-The abstract goes here.
+Inspired by table-top games, this project aimed to develop a program that would provide a meaningful application of machine vision techniques learned in this semester. The program itself takes an input image of rolled dice, and outputs where dice are located, as well the number of pips on the upwards face. In its current state, the program is capable of detecting 89.13\% of rolled dice, with 100\% accuracy in counting the pips of detected dice. Beyond this point, the program has many avenues of continuation, such as integration into actual applications, to improving the underlying code.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
 machine vision, dice detection, table-top games
 \end{IEEEkeywords}
-
-
-
-
-
 
 % For peer review papers, you can put extra information on the cover
 % page as needed:
@@ -467,25 +469,14 @@ machine vision, dice detection, table-top games
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} demo file is intended to serve as a ``starter file''
-for IEEE journal papers produced under \LaTeX\ using
-IEEEtran.cls version 1.8b and later.
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-I wish you the best of success.
+\IEEEPARstart{T}{his} project was first thought of as both a fun and challenging application of machine vision as well as an extension to another program I have been developing for the past year.\\
 
-\hfill mds
- 
-\hfill August 26, 2015
+To give some background, I greatly enjoy table-top gaming as a hobby and have regularly played with a group for years. However, since progressing into graduate school, as well as the majority of the group also going their own ways, we no longer had an easy way to continue playing. Not one to give up, a solution proposed was to develop a chat client bot that would facilitate many of the physical aspects of table-top gaming; the first and foremost being dice rolling. This application became known as GoblinBot (affectionately named from the fantasy creature found in some of the more well known table-top games).\\
 
-\subsection{Subsection Heading Here}
-Subsection text here.
+The primary purpose of GoblinBot is to provide the ability to roll dice in a manner such that all players can see the result easily. Thankfully, having this based as a chat client bot, all results are returned via a message from the bot. This solved the most practical problem of playing these games over the internet, but some issues still remained. One element that makes these games exciting is making critical rolls (no pun intended) and watching the dice settle- for better or for worse. Even with GoblinBot, there is a loss of this anticipation or excitement, as at the end of the day, the bot is still just an electronic program.\\
 
-% needed in second column of first page if using \IEEEpubid
-%\IEEEpubidadjcol
+This is where this program comes into the picture; a melding between the analog and digital. In the lens of GoblinBot, longer standing goal of this project is to eventually tie it into the already existing program with hopes that it provides an improvement to the overall experience. Outside of this, this project seemed like a reasonable challenge to undertake. Having completed the work, it certainly was and I believe that it was a good summation of much of what was taught in the Machine Vision course.\\
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
 
 
 % An example of a floating figure using the graphicx package.
@@ -584,18 +575,349 @@ Subsubsection text here.
 
 
 \section{Project Goals}
+This project had two major goals to achieve in order to produce an ideal program.
+\begin{itemize}
+	\item Be able to detect dice and count the pips.
+	\item Be able to do detection within a reasonable frame rate.
+\end{itemize}
 
 \section{Program Overview/Approach}
+The main problem needed to be solved by this program is to be able to take in an input image, and through a series of transformations/thresholds/etc. be able to isolate both the dice as well as it's pips. Every step of note in this process will be discussed such that it can be easily understood and re-implemented.
+
+\subsection{Grab Input}
+To begin the detection process, the program needs a background image (no dice present) (Fig. \ref{fig:background_input}) from which it can use to differentiate from the foreground image (dice present) (Fig. \ref{fig:foreground_input}).
+
+\begin{figure}[h]
+	\includegraphics[width=8cm]{BG}
+	\centering
+	\caption{The background supplied}
+	\label{fig:background_input}
+\end{figure}
+\begin{figure}[h]
+	\includegraphics[width=8cm]{FG}
+	\centering
+	\caption{The foreground supplied}
+	\label{fig:foreground_input}
+\end{figure}
+
+\subsection{Obtain Difference}
+Once the foreground and background images have been read in, then a difference between the two images is performed (Fig. \ref{fig:fgbg_difference}). This begins the process of finding the regions of interest where the dice are located.\\
+
+\begin{figure}[h]
+	\includegraphics[width=8cm]{"FGBG Difference"}
+	\centering
+	\caption{Difference between background and foreground}
+	\label{fig:fgbg_difference}
+\end{figure}
+
+
+\subsection{Gaussian Blur and Otsu's Threshold}
+Gaussian Blur and Otsu's Threshold (Fig. \ref{fig:otsu_threshold}) is applied to the image to prepare it for Canny Edge detection.\\
+\begin{figure}[h]
+	\includegraphics[width=8cm]{"Otsu1"}
+	\centering
+	\caption{Otsu's Threshold}
+	\label{fig:otsu_threshold}
+\end{figure}
+
+\subsection{Canny Edge Detection}
+Canny Edge detection is performed (Fig. \ref{fig:canny_edges}), and at this point the actual dice detection begins.\\
+\begin{figure}[h]
+	\includegraphics[width=8cm]{"CannyEdges"}
+	\centering
+	\caption{Canny Edge Detection}
+	\label{fig:canny_edges}
+\end{figure}
+
+\subsection{Find and Iterate Through Contours}
+With the Canny Edge detection performed, the program begins to look at all of the closed contours found in the image. If the closed contour found is larger than a specified size (to avoid grabbing singular pips, along other small noise), it will then pass that contour onto a sub-process which will extract and count the pips.\\
+
+\subsubsection{Use Contour to Obtain Bounding Box}
+Once a contour of sufficient size has been found, a bounding box is calculated.\\
+
+\subsubsection{Crop Out Sub-Image}
+Using the calculated bounding box, the region is then cropped out of the original foreground image. By cropping from the original input image, it provides the ability to look at more detail on each individual dice by using more specialized parameters.\\
+
+\subsubsection{Resize}
+With the isolated and cropped out dice, the image is then resized to amplify details and ease the detection of pips (Fig. \ref{fig:small_crop}). In this case, the size was doubled.\\
+
+\begin{figure}[h]
+	\includegraphics[width=4cm]{"small_crop"}
+	\centering
+	\caption{Cropped and Enlarged Die}
+	\label{fig:small_crop}
+\end{figure}
+
+\subsubsection{Gaussian Blur}
+Like in earlier steps, Gaussian blur is applied to improve performance of subsequent operations (Fig. \ref{fig:small_blur}).\\
+
+\begin{figure}[h]
+	\includegraphics[width=4cm]{"small_blur"}
+	\centering
+	\caption{Gaussian Blur Applied}
+	\label{fig:small_blur}
+\end{figure}
+
+\subsubsection{Otsu's Threshold}
+Application of Otsu's Threshold to further bring out pips from the surrounding dice face (Fig. \ref{fig:small_otsu}).\\
+
+\begin{figure}[h]
+	\includegraphics[width=4cm]{"small_otsu"}
+	\centering
+	\caption{Otsu's Threshold Applied}
+	\label{fig:small_otsu}
+\end{figure}
+
+\subsubsection{Bucket Fill Corners}
+At this point, blob detection can be performed, but the application of bucket filling the corners ensures that the pips, and only the pips, are left when blob detection is run. As the name implies, the program takes the four corners of the image and fills with white pixels (Fig. \ref{fig:small_bucketfill}).\\
+
+\begin{figure}[h]
+	\includegraphics[width=4cm]{"small_bucketfill"}
+	\centering
+	\caption{Bucket Fill Corners}
+	\label{fig:small_bucketfill}
+\end{figure}
+
+\subsubsection{Use Blob Detection to Count Pips}
+Finally, with the pips being completely isolated, blob detection is used, and the number of detected blobs is counted, giving the number of pips on the die (Fig. \ref{fig:small_blob}).\\
+
+\begin{figure}[h]
+	\includegraphics[width=4cm]{"small_blob"}
+	\centering
+	\caption{Count Pips via Blob Detection}
+	\label{fig:small_blob}
+\end{figure}
+
+\subsection{Draw Bounding Boxes and Pip Count}
+After running on each closed contour, the program then draws each bounding box and corresponding number of pips, resulting in the final output (Fig. \ref{fig:final_output_red}).\\
+
+\begin{figure}[h]
+	\includegraphics[width=8cm]{"Final_output_red"}
+	\centering
+	\caption{Final Output with Bounding Boxes and Number of Pips Drawn}
+	\label{fig:final_output_red}
+\end{figure}
 
 \section{Results}
+The immediate results of this project show that the program can detect 89.13\% of dice, with a 100\% accuracy rate when counting the pips on detected dice. It should be noted however that these results were taken from a small set of five test images, four of which consisted of rolled dice, and one being manually set up. In addition, two additional images were provided containing edge case scenarios: Immediately Adjacent Dice and Overlapping Dice. The program was unable to detect dice in these two images.\\
+
+Performance-wise, frame rate was investigated by looping the operations and recording how long it took to process each loop. When testing this, frame rate never dropped below 5 frames per second, even with a great deal of debug code running in tandem.\\
+
+
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{image1}
+		\caption{Input}
+		\label{fig:results1_sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{image1_output}
+		\caption{Output}
+		\label{fig:results1_sub2}
+	\end{subfigure}
+	\caption{Input and Output using test image 1}
+	\label{fig:results1}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{image2}
+		\caption{Input}
+		\label{fig:results2_sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{image2_output}
+		\caption{Output}
+		\label{fig:results2_sub2}
+	\end{subfigure}
+	\caption{Input and Output using test image 2}
+	\label{fig:results2}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{image3}
+		\caption{Input}
+		\label{fig:results3_sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{image3_output}
+		\caption{Output}
+		\label{fig:results3_sub2}
+	\end{subfigure}
+	\caption{Input and Output using test image 3}
+	\label{fig:results3}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{image4}
+		\caption{Input}
+		\label{fig:results4_sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{image4_output}
+		\caption{Output}
+		\label{fig:results4_sub2}
+	\end{subfigure}
+	\caption{Input and Output using test image 4}
+	\label{fig:results4}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{image5}
+		\caption{Input}
+		\label{fig:results5_sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{image5_output}
+		\caption{Output}
+		\label{fig:results5_sub2}
+	\end{subfigure}
+	\caption{Input and Output using test image 5}
+	\label{fig:results5}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{adjacent_1}
+		\caption{Input}
+		\label{fig:adjacent_sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{adjacent_2}
+		\caption{Canny Edge Detection}
+		\label{fig:adjacent_sub2}
+	\end{subfigure}
+	\caption{Input and Canny Edge using test image 6 (edge case)}
+	\label{fig:adjancet}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{overlapping_1}
+		\caption{Input}
+		\label{fig:overlapping_sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{overlapping_2}
+		\caption{Canny Edge Detection}
+		\label{fig:overlapping_sub2}
+	\end{subfigure}
+	\caption{Input and Canny Edge using test image 7 (edge case)}
+	\label{fig:overlapping}
+\end{figure}
+
+\begin{figure}[h]
+	\includegraphics[width=8cm]{"pixel_gaps_2"}
+	\centering
+	\caption{Canny Edge detection from test image 5}
+	\label{fig:pixel_gaps_canny}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{pixel_gap1}
+		\caption{Fourth Dice, Last Row}
+		\label{fig:pixel_gaps_sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{pixel_gap2}
+		\caption{Third Dice, Middle Row}
+		\label{fig:pixel_gaps_sub2}
+	\end{subfigure}
+	\caption{Zoomed in image of un-closed contours from test image 5}
+	\label{fig:pixel_gaps}
+\end{figure}
+
+
 
 \section{Discussion}
+Having started work on this program from scratch, these results are quite exciting. Drawing from figures \ref{fig:results1} to \ref{fig:results5} we can see many different, interesting aspects. As mentioned earlier, the first four test images were of actual dice rolls, with the fifth being a more controlled setup to better gauge the performance of multiple dice.\\
+
+In figure \ref{fig:results1}, we can see that the four dice were all correctly located and counted, with two dice in the lower right being relatively close. While maybe not as interesting as what follows, this shows a good baseline application/use case of the program\\
+
+In figure \ref{fig:results2}, things start to get a little more interesting. All dice that were rolled within frame were able to be located and counted, leaving out the die out of frame. When looking over the results of this image, it was quite encouraging that the program did not miscount the dice as only having one pip, and instead ignoring it. This exclusion is primarily due to the contour not being closed, which could be an issue should the closed contours no longer be a criteria for detection. For the time being however, it does its job and produces ideal results.\\
+
+Figure \ref{fig:results3} is the best result produced by the program, in that it is able to get 100\% detection, 100\% accuracy on counting, as well as being rolled naturally. Not much else needs to be said about this figure, other than that this is the ideal performance for the program.\\
+
+Figure \ref{fig:results4} starts to show some of the issues in the dice detection. First, the two dice in the center, showing ones, are not picked up by the program. Second, the bounding box on the six in the upper right is heavily stretched out in comparison to the intended box shape. Since the non-detection problem is so large, discussion of that will be in a later section, and for now the focus will be on the misshapen bounding box. To the best of my understanding, this is a result of the program picking up the side of five dice right next to it, thus increasing the size of the box. Thankfully, likely due to the lighting, the pips on the side of the die are not counted, and it still gets the correct value of six.\\
+
+Finally, figure \ref{fig:results5} shows the similar issues of non-detection. This being the case, the program is still able to detect the large majority of dice in the image, as well as correctly counting the pips.\\
+
+Moving onto the topic of non-detection, figure \ref{fig:pixel_gaps_canny} shows the Canny Edge detection from test image 5, and figure \ref{fig:pixel_gaps} (a) and (b) show a zoomed in version of a couple of the non-detected dice. As described earlier, the program checks for closed contours to consider the region to be of interest or not, and as can be seen here, there are small gaps in the contours. While the program is fairly robust in avoiding noise (mostly due to the heavy constraints used to handle the input) it cannot fully avoid it even in more controlled environments, and certainly not in other environments. The take-away from this is that this would be one of the next steps in developing this program- figuring out a solution to close, or circumvent, the gaps in contours.\\
+
+Currently, the biggest issue this program faces is its inability to detect 100\% of the dice in the image. Unfortunately, given the time frame of this project I was unable to fix these issues in time, however below are some of the potential solutions to this problem.
+
+\begin{itemize}
+	\item Use better parameters to improve each step involved in the edge detection/contouring process.
+	\item Use morphology to attempt to patch the small gaps.
+	\item Suggested in the presentation portion of this project, use the fact that the dice face is square to allow for a more flexible detection scheme (so long as the contour is mostly a square, it should be able to detect)
+	
+\end{itemize}
+
+
+Beyond the initial set of test images, two additional images were taken and used as input for the program. The goal with these two edge case images were to see if any insight could be gained from how the program handled the images, as well as to sate simple curiosity. In figures \ref{fig:adjancet} (adjacent dice) and \ref{fig:overlapping} (overlapping dice), the input image, as well as its Canny Edge detection are shown. The biggest take away from these sets of images is to see how the contour is shaped, which by extension explains why the detection failed. While it is fairly clear that the overlapping input would have a great deal of trouble reaching a state where it could be successfully detected, the adjacent input is quite close to forming closed contours. Detection could likely be achieved by additional fine-tuning of the various parameters.\\
+
+Finally, as far as the frame rate is concerned, I believe it reaches the goal of being reasonable. The frame rate was never a problem during the development phase, and if it was, there is still a great deal of room for optimization.\\
+
+
 
 \section{Conclusion}
-The conclusion goes here.
+As far as I am concerned, this project can be seen as a success. While the goal of detection was not achieved 100\%, the ground work to reach that point is absolutely present. The project itself was quite enjoyable to work on as well, which is always a plus. Beyond that, the following two subsections discuss directions that this work could go in, both internally and externally.\\
 
 
+\subsection{Future Work}
+This section describes potential extensions of the work done in this project.\\
 
+\subsubsection{Improve Detection/Bug Fixes}
+The immediate steps to be taken with this project would be to fix the errors with the dice detection, namely fixing the issue of small gaps in the contours. Beyond this, there are small improvements to parameters and other aspects that could be undertaken as well, such as removing the constraint of requiring a background image for detection, or modifying the program that it is more flexible in what it considers a valid contour that denotes a die.\\
+
+\subsubsection{Broaden Detection Scope}
+Beyond direct improvements to the program, another area of future work would be to achieve colored dice and numbered dice detection. Initially, this project was to detect colored dice due to their widespread use, but this was constrained due to the additional difficulty it posed when trying to detect them. While the program currently only covered dice with pips, another extension of this project would be to detect dice with numbers on them. The proposed approach to this problem is to isolate the dice in a much, if not completely, similar way, but then use more advanced methods than blob detection to read the number from the die face. One such method might be to use a machine learning model, trained on detecting numbers to read the value.\\
+
+\subsubsection{Machine Learning Approach}
+While this is slightly covered in the previous section, this would be a machine learning implementation of the whole process. One of the larger problems with this however is the lack of a good data set, but with a good enough data set, this approach would presumably be much more flexible. Some of the major gains would be the loosening of the heavy constraints placed on how the input images have to be taken, as well as being able to easily train the model on both pips and numbers.\\
+\subsection{Applications}
+While similar to future work in the sense that this would be what would naturally following the completion of this project, this section will focus more on the external aspects of how this program can be taken and used, rather than internal improvements.\\
+
+\subsubsection{Augmented Reality Dice Games}
+Probably the easiest to work with, one application of this program would be to apply it to simple dice games such as Yahtzee or Farkle. Since the program is able to read in many different aspects of rolled dice and then use them in a digital manner, a natural progression would be to use this as input to a game. While it would depend on the game, the only elements that would need to be added is game states/turns, as well as keeping score. Beyond this, additional flair and aspects can be programmed in to produce a more interesting and exciting display.\\
+
+\subsubsection{Phone Application or Tool}
+Closer to the original goal/inspiration for this project, this program could also be used as a tool to assist table-top gaming. In the most general case, the ability to quickly count, as well as potentially sum, a large amount of dice is invaluable given many complex table-top games. Rolling up to eight dice at a time is often common, and there are situations in some games that require up to rolling as many as forty dice, all at once, to perform an action. Being able to speed up the process of counting dice would almost certainly translate into faster games.\\
+
+\subsubsection{Bringing Physical Aspects to Network Play}
+Closest now to the inspiration of the project is the idea of bringing aspects of in-person play to an online session. One of the larger issues for playing traditionally table-top games over the internet is the inherent lack of having all players in one spot. One of the biggest appeal to table-top gaming is being able to have face-to-face interaction with the other players, which is wholly removed when playing over the internet. This application of the program in this way would be doing no more than providing some helpful tools to otherwise a webcam focused on some dice, but the intent is that it adds the sense of physicality to an otherwise wholly virtual game session.\\
 
 
 % if have a single appendix:
@@ -613,29 +935,9 @@ The conclusion goes here.
 %
 
 
-\appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
-
-% you can choose not to have a title for an appendix
-% if you want by leaving the argument blank
-\section{}
-Appendix two text goes here.
-
-
-% use section* for acknowledgment
-\section*{Acknowledgment}
-
-
-The authors would like to thank...
-
 
 % Can use something like this to put references on a page
 % by themselves when using endfloat and the captionsoff option.
-\ifCLASSOPTIONcaptionsoff
-  \newpage
-\fi
-
 
 
 % trigger a \newpage just before the given reference
@@ -660,13 +962,6 @@ The authors would like to thank...
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
-
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
-\end{thebibliography}
 
 % biography section
 % 
@@ -679,22 +974,13 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 %\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
 
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
-\end{IEEEbiography}
-
 % if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
+
 
 % insert where needed to balance the two columns on the last page with
 % biographies
 %\newpage
 
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
 
 % You can push biographies down or up by placing
 % a \vfill before or after them. The appropriate

@@ -1,17 +1,101 @@
 \relax 
-\bibcite{IEEEhowto:kopka}{1}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {I-A}}Subsection Heading Here}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {I-A}1}Subsubsection Heading Here}{1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {II}Project Goals}{1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {III}Program Overview/Approach}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Results}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {V}Discussion}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  A: Proof of the First Zonklar Equation}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  B}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{Biographies}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{Michael Shell}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{John Doe}{1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{Jane Doe}{1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Grab Input}{1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The background supplied\relax }}{1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:background_input}{{1}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Obtain Difference}{1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The foreground supplied\relax }}{2}\protected@file@percent }
+\newlabel{fig:foreground_input}{{2}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Difference between background and foreground\relax }}{2}\protected@file@percent }
+\newlabel{fig:fgbg_difference}{{3}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Gaussian Blur and Otsu's Threshold}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}Canny Edge Detection}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-E}}Find and Iterate Through Contours}{2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Otsu's Threshold\relax }}{2}\protected@file@percent }
+\newlabel{fig:otsu_threshold}{{4}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Canny Edge Detection\relax }}{2}\protected@file@percent }
+\newlabel{fig:canny_edges}{{5}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-E}1}Use Contour to Obtain Bounding Box}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-E}2}Crop Out Sub-Image}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-E}3}Resize}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-E}4}Gaussian Blur}{2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Cropped and Enlarged Die\relax }}{3}\protected@file@percent }
+\newlabel{fig:small_crop}{{6}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Gaussian Blur Applied\relax }}{3}\protected@file@percent }
+\newlabel{fig:small_blur}{{7}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-E}5}Otsu's Threshold}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Otsu's Threshold Applied\relax }}{3}\protected@file@percent }
+\newlabel{fig:small_otsu}{{8}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-E}6}Bucket Fill Corners}{3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-E}7}Use Blob Detection to Count Pips}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Bucket Fill Corners\relax }}{3}\protected@file@percent }
+\newlabel{fig:small_bucketfill}{{9}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Count Pips via Blob Detection\relax }}{3}\protected@file@percent }
+\newlabel{fig:small_blob}{{10}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-F}}Draw Bounding Boxes and Pip Count}{3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Results}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Final Output with Bounding Boxes and Number of Pips Drawn\relax }}{4}\protected@file@percent }
+\newlabel{fig:final_output_red}{{11}{4}}
+\newlabel{fig:results1_sub1}{{12a}{4}}
+\newlabel{sub@fig:results1_sub1}{{a}{4}}
+\newlabel{fig:results1_sub2}{{12b}{4}}
+\newlabel{sub@fig:results1_sub2}{{b}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Input and Output using test image 1\relax }}{4}\protected@file@percent }
+\newlabel{fig:results1}{{12}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Discussion}{4}\protected@file@percent }
+\newlabel{fig:results2_sub1}{{13a}{4}}
+\newlabel{sub@fig:results2_sub1}{{a}{4}}
+\newlabel{fig:results2_sub2}{{13b}{4}}
+\newlabel{sub@fig:results2_sub2}{{b}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Input and Output using test image 2\relax }}{4}\protected@file@percent }
+\newlabel{fig:results2}{{13}{4}}
+\newlabel{fig:results3_sub1}{{14a}{4}}
+\newlabel{sub@fig:results3_sub1}{{a}{4}}
+\newlabel{fig:results3_sub2}{{14b}{4}}
+\newlabel{sub@fig:results3_sub2}{{b}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Input and Output using test image 3\relax }}{4}\protected@file@percent }
+\newlabel{fig:results3}{{14}{4}}
+\newlabel{fig:results4_sub1}{{15a}{4}}
+\newlabel{sub@fig:results4_sub1}{{a}{4}}
+\newlabel{fig:results4_sub2}{{15b}{4}}
+\newlabel{sub@fig:results4_sub2}{{b}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Input and Output using test image 4\relax }}{4}\protected@file@percent }
+\newlabel{fig:results4}{{15}{4}}
+\newlabel{fig:results5_sub1}{{16a}{4}}
+\newlabel{sub@fig:results5_sub1}{{a}{4}}
+\newlabel{fig:results5_sub2}{{16b}{4}}
+\newlabel{sub@fig:results5_sub2}{{b}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Input and Output using test image 5\relax }}{4}\protected@file@percent }
+\newlabel{fig:results5}{{16}{4}}
+\newlabel{fig:adjacent_sub1}{{17a}{4}}
+\newlabel{sub@fig:adjacent_sub1}{{a}{4}}
+\newlabel{fig:adjacent_sub2}{{17b}{4}}
+\newlabel{sub@fig:adjacent_sub2}{{b}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Input and Canny Edge using test image 6 (edge case)\relax }}{4}\protected@file@percent }
+\newlabel{fig:adjancet}{{17}{4}}
+\newlabel{fig:overlapping_sub1}{{18a}{5}}
+\newlabel{sub@fig:overlapping_sub1}{{a}{5}}
+\newlabel{fig:overlapping_sub2}{{18b}{5}}
+\newlabel{sub@fig:overlapping_sub2}{{b}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Input and Canny Edge using test image 7 (edge case)\relax }}{5}\protected@file@percent }
+\newlabel{fig:overlapping}{{18}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Canny Edge detection from test image 5\relax }}{5}\protected@file@percent }
+\newlabel{fig:pixel_gaps_canny}{{19}{5}}
+\newlabel{fig:pixel_gaps_sub1}{{20a}{5}}
+\newlabel{sub@fig:pixel_gaps_sub1}{{a}{5}}
+\newlabel{fig:pixel_gaps_sub2}{{20b}{5}}
+\newlabel{sub@fig:pixel_gaps_sub2}{{b}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Zoomed in image of un-closed contours from test image 5\relax }}{5}\protected@file@percent }
+\newlabel{fig:pixel_gaps}{{20}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Future Work}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}1}Improve Detection/Bug Fixes}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}2}Broaden Detection Scope}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}3}Machine Learning Approach}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Applications}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}1}Augmented Reality Dice Games}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}2}Phone Application or Tool}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}3}Bringing Physical Aspects to Network Play}{6}\protected@file@percent }
